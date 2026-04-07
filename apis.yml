@@ -5,9 +5,9 @@ apis:
   - aid: datocms:datocms
     name: DatoCMS
     tags:
-      - Headless CMS
-      - Content Management
       - CMS
+      - Content Management
+      - Headless CMS
     humanURL: >-
       https://www.datocms.com/docs/content-management-api/setting-the-environment
     properties:
@@ -23,9 +23,9 @@ apis:
       and ensure consistency across their websites and applications.
 name: DatoCMS
 tags:
-  - Headless CMS
-  - Content Management
   - CMS
+  - Content Management
+  - Headless CMS
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
