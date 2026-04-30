@@ -1,42 +1,52 @@
 # DatoCMS (datocms)
-DatoCMS is a headless content management system that enables users to create, manage, and deliver digital content across various platforms and devices. With its intuitive interface and powerful features, DatoCMS allows developers and content creators to work together seamlessly to build and update websites, mobile apps, and other digital experiences. By decoupling the content management system from the front-end presentation layer, DatoCMS provides flexibility and scalability for organizations of all sizes, making it easier to create and maintain dynamic, engaging content that drives results. With robust APIs and integrations with popular tools and frameworks, DatoCMS empowers teams to collaborate and innovate in a fast-paced, digital-first world.
+DatoCMS is a headless content management system that enables users to create, manage, and deliver digital content across websites, mobile apps, and other digital experiences. The platform exposes a JSON:API-based Content Management API for content and schema, and a CDN-fronted GraphQL Content Delivery API for read-heavy client applications.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/datocms/refs/heads/main/apis.yml)
+**URL:** [Visit APIs.yml URL](https://raw.githubusercontent.com/api-evangelist/datocms/refs/heads/main/apis.yml)
 
 ## Scope
 
-- **Type:** Index 
-- **Position:** Consumer 
-- **Access:** 3rd-Party 
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+- **xType:** company
 
-## Tags:
+## Tags
 
- - Headless CMS, Content Management, CMS
+- CMS, Content Delivery, Content Management, GraphQL, Headless CMS
 
 ## Timestamps
 
-- **Created:** 2025-01-08 
-- **Modified:** 2025-03-01 
+- **Created:** 2025-01-08
+- **Modified:** 2026-04-28
 
 ## APIs
 
-### DatoCMS
-DatoCMS is a headless content management system that allows users to create, manage, and deliver digital content across various platforms. It provides a user-friendly interface for content creators to easily add and edit content, while also offering robust developer tools for customization and integration with other systems. DatoCMS enables teams to collaborate on content creation and ensure consistency across their websites and applications. With its flexible architecture and powerful APIs, DatoCMS empowers organizations to build and deliver dynamic, engaging digital experiences to their audiences.
+### DatoCMS Content Management API
+JSON:API REST API for items, item types, fields, uploads, environments, webhooks, plugins, workflows, and roles. 150+ endpoints across 40+ resources.
 
-**Human URL:** [https://www.datocms.com/docs/content-management-api/setting-the-environment](https://www.datocms.com/docs/content-management-api/setting-the-environment)
+**Base URL:** https://site-api.datocms.com
 
+- [Documentation](https://www.datocms.com/docs/content-management-api)
+- [OpenAPI](openapi/datocms-content-management-api.yml)
+- [JSONSchema](json-schema/item.json)
+- [Hyperschema](https://site-api.datocms.com/docs/site-api-hyperschema.json)
 
-#### Tags:
+### DatoCMS Content Delivery API
+CDN-fronted GraphQL endpoint optimized for low-latency reads of published content.
 
- - Headless CMS, Content Management, CMS
+**Base URL:** https://graphql.datocms.com
 
-#### Properties
+## Common Properties
 
-- [Documentation](https://www.datocms.com/docs/content-management-api/setting-the-environment)
+- [Website](https://www.datocms.com)
+- [Documentation](https://www.datocms.com/docs)
+- [GitHub](https://github.com/datocms)
+- [JSON-LD](json-ld/datocms-context.jsonld)
+- [Vocabulary](vocabulary/datocms-vocabulary.yml)
+- [Capabilities](capabilities/datocms-capabilities.yml)
+- [Rules](rules/datocms-rules.yml)
 
 ## Maintainers
 
-**FN:** Kin Lane
-
-**Email:** info@apievangelist.com
-
+- **FN:** Kin Lane
+- **Email:** kin@apievangelist.com

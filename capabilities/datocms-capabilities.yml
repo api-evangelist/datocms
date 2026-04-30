@@ -1,0 +1,49 @@
+name: DatoCMS Capabilities
+description: >-
+  Capabilities exposed across DatoCMS Content Management and Content
+  Delivery APIs.
+capabilities:
+  - name: Content Management
+    description: Create, read, update, delete, and publish records via the CMA.
+    api: datocms:datocms
+  - name: Schema Management
+    description: Define and evolve item types, fields, and fieldsets.
+    api: datocms:datocms
+  - name: Asset Management
+    description: Upload and manage images, videos, and documents.
+    api: datocms:datocms
+  - name: Environments and Migrations
+    description: Fork environments to safely evolve the schema and migrate content.
+    api: datocms:datocms
+  - name: Webhooks
+    description: Trigger external systems on content and build events.
+    api: datocms:datocms
+  - name: Plugins and UI Extensions
+    description: Customize the editing experience with installed plugins.
+    api: datocms:datocms
+  - name: Workflows
+    description: Apply editorial states such as draft, review, and published.
+    api: datocms:datocms
+  - name: Scheduled Publications
+    description: Schedule future publish or unpublish actions.
+    api: datocms:datocms
+  - name: Roles and Tokens
+    description: Manage collaborators, roles, permissions, and API tokens.
+    api: datocms:datocms
+  - name: Site Search
+    description: Configure indexes and serve search results across content.
+    api: datocms:datocms
+  - name: Content Delivery
+    description: Serve published content via the CDN-fronted GraphQL Content Delivery API.
+    api: datocms:datocms
+use_cases:
+  - name: Headless website backend
+    description: Power Jamstack and SSR sites with the GraphQL Content Delivery API.
+  - name: Multi-environment content workflows
+    description: Use forked environments and workflows to manage staging and production.
+  - name: Programmatic content migration
+    description: Automate schema and content migrations with the CMA.
+  - name: Marketing automation
+    description: Sync content events to downstream systems using webhooks.
+  - name: Editorial governance
+    description: Apply roles, tokens, audit logs, and SSO for enterprise editing.

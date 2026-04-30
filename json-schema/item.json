@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/datocms/main/json-schema/item.json",
+  "title": "DatoCMS Item",
+  "description": "JSON:API resource representation of a DatoCMS record (item).",
+  "type": "object",
+  "required": ["type", "id"],
+  "properties": {
+    "type": {"type": "string", "const": "item"},
+    "id": {"type": "string"},
+    "attributes": {
+      "type": "object",
+      "description": "Field values keyed by API key.",
+      "additionalProperties": true
+    },
+    "relationships": {
+      "type": "object",
+      "properties": {
+        "item_type": {"type": "object"},
+        "creator": {"type": "object"}
+      }
+    },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "created_at": {"type": "string", "format": "date-time"},
+        "updated_at": {"type": "string", "format": "date-time"},
+        "published_at": {"type": "string", "format": "date-time"},
+        "first_published_at": {"type": "string", "format": "date-time"},
+        "publication_scheduled_at": {"type": ["string", "null"], "format": "date-time"},
+        "unpublishing_scheduled_at": {"type": ["string", "null"], "format": "date-time"},
+        "status": {"type": "string", "enum": ["draft", "updated", "published"]},
+        "is_valid": {"type": "boolean"}
+      }
+    }
+  }
+}

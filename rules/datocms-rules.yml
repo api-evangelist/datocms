@@ -1,0 +1,40 @@
+extends:
+  - spectral:oas
+rules:
+  datocms-server-base:
+    description: CMA server URL must be https://site-api.datocms.com.
+    given: $.servers[*].url
+    severity: error
+    then:
+      function: pattern
+      functionOptions:
+        match: "^https://site-api\\.datocms\\.com$"
+  datocms-bearer-auth:
+    description: Operations must use API token bearer auth.
+    given: $.components.securitySchemes.apiTokenAuth
+    severity: error
+    then:
+      field: scheme
+      function: pattern
+      functionOptions:
+        match: "^bearer$"
+  datocms-jsonapi-content-type:
+    description: Request and response bodies should use application/vnd.api+json.
+    given: $.paths.*.*.requestBody.content
+    severity: warn
+    then:
+      field: application/vnd.api+json
+      function: truthy
+  datocms-operation-tags:
+    description: Every operation must declare a tag.
+    given: $.paths[*][*]
+    severity: error
+    then:
+      field: tags
+      function: truthy
+  datocms-page-pagination:
+    description: List endpoints should accept page[offset] and page[limit] params.
+    given: $.paths.*.get
+    severity: warn
+    then:
+      function: truthy

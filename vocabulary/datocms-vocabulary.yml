@@ -1,0 +1,57 @@
+name: DatoCMS Vocabulary
+description: >-
+  Shared vocabulary of terms used across DatoCMS Content Management and
+  Content Delivery APIs.
+terms:
+  - term: Site
+    definition: >-
+      A DatoCMS project owning content, schema, environments, and
+      configuration.
+  - term: Item
+    definition: >-
+      A content record stored against an item type, also called a record
+      in the UI.
+  - term: Item Type
+    definition: >-
+      A model defining the schema, fields, and ordering for a class of
+      items.
+  - term: Field
+    definition: >-
+      A typed attribute on an item type such as string, structured text,
+      slug, link, or gallery.
+  - term: Fieldset
+    definition: >-
+      A grouping of fields on an item type for editing and validation.
+  - term: Upload
+    definition: >-
+      An asset such as image, video, or document managed by DatoCMS.
+  - term: Environment
+    definition: >-
+      A versioned copy of the site schema and content used for staging
+      and migrations.
+  - term: Webhook
+    definition: >-
+      An outbound HTTP callback fired when items, uploads, or builds
+      change.
+  - term: Plugin
+    definition: >-
+      A custom UI extension installed in the DatoCMS editor.
+  - term: Workflow
+    definition: >-
+      A sequence of editorial states such as draft, review, and published
+      configurable per item type.
+  - term: Scheduled Publication
+    definition: >-
+      A future-dated change that publishes or unpublishes an item.
+  - term: Content Delivery API
+    definition: >-
+      The CDN-fronted GraphQL API used by client applications to read
+      published content.
+  - term: API Token
+    definition: >-
+      A bearer credential issued by DatoCMS used in the Authorization
+      header.
+  - term: Maintenance Mode
+    definition: >-
+      A site-wide setting that prevents content edits during structural
+      migrations.

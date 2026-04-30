@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "datocms": "https://www.datocms.com/docs/content-management-api/",
+    "Site": {
+      "@id": "datocms:resources/site",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "name": "https://schema.org/name",
+        "domain": "https://schema.org/url",
+        "locales": "https://schema.org/inLanguage"
+      }
+    },
+    "Item": {
+      "@id": "datocms:resources/item",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "type": "https://schema.org/additionalType",
+        "attributes": "https://schema.org/additionalProperty",
+        "created_at": "https://schema.org/dateCreated",
+        "updated_at": "https://schema.org/dateModified",
+        "published_at": "https://schema.org/datePublished",
+        "status": "https://schema.org/status"
+      }
+    },
+    "ItemType": {
+      "@id": "datocms:resources/item-type",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "name": "https://schema.org/name",
+        "api_key": "https://schema.org/identifier",
+        "singleton": "https://schema.org/option"
+      }
+    },
+    "Field": {
+      "@id": "datocms:resources/field",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "label": "https://schema.org/name",
+        "api_key": "https://schema.org/identifier",
+        "field_type": "https://schema.org/additionalType",
+        "validators": "https://schema.org/additionalProperty"
+      }
+    },
+    "Upload": {
+      "@id": "https://schema.org/MediaObject",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "url": "https://schema.org/url",
+        "size": "https://schema.org/contentSize",
+        "format": "https://schema.org/encodingFormat",
+        "alt": "https://schema.org/description",
+        "title": "https://schema.org/name"
+      }
+    },
+    "Environment": {
+      "@id": "datocms:resources/environment",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "primary": "https://schema.org/option",
+        "forked_from": "https://schema.org/isBasedOn"
+      }
+    },
+    "Webhook": {
+      "@id": "datocms:resources/webhook",
+      "@context": {
+        "id": "https://schema.org/identifier",
+        "name": "https://schema.org/name",
+        "url": "https://schema.org/url",
+        "events": "https://schema.org/event"
+      }
+    }
+  }
+}
