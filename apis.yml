@@ -92,6 +92,14 @@ common:
     url: capabilities/datocms-capabilities.yml
   - type: Rules
     url: rules/datocms-rules.yml
+  - type: Integrations
+    url: https://www.datocms.com/marketplace
+integrations:
+  - name: Starters
+  - name: Recipes
+  - name: Hosting
+  - name: View all (183)
+  - name: View all (8)
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
