@@ -1,0 +1,105 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: DatoCMS Content Management API — Item Types
+  description: 'DatoCMS Content Management API — Item Types. 2 operations. Lead operation: List item types (models). Self-contained
+    Naftiko capability covering one Datocms business surface.'
+  tags:
+  - Datocms
+  - Item Types
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    DATOCMS_API_KEY: DATOCMS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: content-management-item-types
+    baseUri: https://site-api.datocms.com
+    description: DatoCMS Content Management API — Item Types business capability. Self-contained, no shared references.
+    resources:
+    - name: item-types
+      path: /item-types
+      operations:
+      - name: listitemtypes
+        method: GET
+        description: List item types (models)
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: createitemtype
+        method: POST
+        description: Create an item type
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.DATOCMS_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: content-management-item-types-rest
+    port: 8080
+    description: REST adapter for DatoCMS Content Management API — Item Types. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/item-types
+      name: item-types
+      description: REST surface for item-types.
+      operations:
+      - method: GET
+        name: listitemtypes
+        description: List item types (models)
+        call: content-management-item-types.listitemtypes
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createitemtype
+        description: Create an item type
+        call: content-management-item-types.createitemtype
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: content-management-item-types-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for DatoCMS Content Management API — Item Types. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: list-item-types-models
+      description: List item types (models)
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: content-management-item-types.listitemtypes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-item-type
+      description: Create an item type
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: content-management-item-types.createitemtype
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
