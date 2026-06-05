@@ -1,8 +1,9 @@
 aid: datocms
 name: DatoCMS
-description: DatoCMS is a headless content management system that enables users to create, manage, and deliver digital content
-  across websites, mobile apps, and other digital experiences. The platform exposes a JSON:API-based Content Management API
-  for content and schema, and a CDN-fronted GraphQL Content Delivery API for read-heavy client applications.
+description: >-
+  DatoCMS is a headless content management system that enables users to create, manage, and deliver digital content
+  across websites, mobile apps, and other digital experiences. The platform exposes a JSON:API-based Content Management
+  API for content and schema, and a CDN-fronted GraphQL Content Delivery API for read-heavy client applications.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -21,9 +22,10 @@ access: 3rd-Party
 apis:
 - aid: datocms:datocms
   name: DatoCMS Content Management API
-  description: The DatoCMS Content Management API (CMA) is a JSON:API REST API for managing items, item types, fields, uploads,
-    environments, webhooks, plugins, workflows, and roles on a DatoCMS site. It exposes 150+ endpoints across 40+ resources,
-    authenticated with API tokens.
+  description: >-
+    The DatoCMS Content Management API (CMA) is a JSON:API REST API for managing items, item types, fields, uploads,
+    environments, webhooks, plugins, workflows, and roles on a DatoCMS site. It exposes 150+ endpoints across 40+
+    resources, authenticated with API tokens.
   humanURL: https://www.datocms.com/docs/content-management-api
   baseURL: https://site-api.datocms.com
   tags:
@@ -43,23 +45,10 @@ apis:
     url: openapi/datocms-content-management-api.yml
   - type: JSONSchema
     url: json-schema/item.json
-  - type: NaftikoCapability
-    url: capabilities/content-management-environments.yaml
-  - type: NaftikoCapability
-    url: capabilities/content-management-fields.yaml
-  - type: NaftikoCapability
-    url: capabilities/content-management-item-types.yaml
-  - type: NaftikoCapability
-    url: capabilities/content-management-items.yaml
-  - type: NaftikoCapability
-    url: capabilities/content-management-site.yaml
-  - type: NaftikoCapability
-    url: capabilities/content-management-uploads.yaml
-  - type: NaftikoCapability
-    url: capabilities/content-management-webhooks.yaml
 - aid: datocms:datocms-content-delivery-api
   name: DatoCMS Content Delivery API
-  description: The DatoCMS Content Delivery API is a CDN-fronted GraphQL endpoint optimized for low-latency reads of published
+  description: >-
+    The DatoCMS Content Delivery API is a CDN-fronted GraphQL endpoint optimized for low-latency reads of published
     content from client applications such as Jamstack and SSR sites.
   humanURL: https://www.datocms.com/docs/content-delivery-api
   baseURL: https://graphql.datocms.com
@@ -71,6 +60,8 @@ apis:
   properties:
   - type: Documentation
     url: https://www.datocms.com/docs/content-delivery-api
+  - url: graphql/datocms-graphql.md
+    type: GraphQL
 common:
 - type: LinkedIn
   url: https://www.linkedin.com/company/datocms
