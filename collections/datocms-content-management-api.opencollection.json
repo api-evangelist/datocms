@@ -1,0 +1,303 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DatoCMS Content Management API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Site",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve site details",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/site"
+          },
+          "docs": "Retrieve site details"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List items (records)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/items",
+            "params": [
+              {
+                "name": "page[offset]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page[limit]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[type]",
+                "value": "",
+                "type": "query",
+                "description": "Item type API key or ID to filter by."
+              }
+            ]
+          },
+          "docs": "List items (records)"
+        },
+        {
+          "info": {
+            "name": "Create an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an item"
+        },
+        {
+          "info": {
+            "name": "Retrieve an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve an item"
+        },
+        {
+          "info": {
+            "name": "Update an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://site-api.datocms.com/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an item"
+        },
+        {
+          "info": {
+            "name": "Delete an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://site-api.datocms.com/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an item"
+        },
+        {
+          "info": {
+            "name": "Publish an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://site-api.datocms.com/items/:itemId/publish",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Publish an item"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Item Types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List item types (models)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/item-types"
+          },
+          "docs": "List item types (models)"
+        },
+        {
+          "info": {
+            "name": "Create an item type",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/item-types",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an item type"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Fields",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List fields",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/fields"
+          },
+          "docs": "List fields"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Uploads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List uploads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/uploads"
+          },
+          "docs": "List uploads"
+        },
+        {
+          "info": {
+            "name": "Create an upload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/uploads",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an upload"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Environments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List environments",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/environments"
+          },
+          "docs": "List environments"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/webhooks"
+          },
+          "docs": "List webhooks"
+        },
+        {
+          "info": {
+            "name": "Create a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
