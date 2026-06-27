@@ -71,7 +71,7 @@ common:
   url: https://www.datocms.com/docs
 - type: Pricing
   url: https://www.datocms.com/pricing
-- type: SignUp
+- type: Signup
   url: https://dashboard.datocms.com/signup
 - type: Login
   url: https://dashboard.datocms.com/login
