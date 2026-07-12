@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/datocms-content-management-api.yml
+summary:
+  types:
+  - http
+schemes:
+- name: apiTokenAuth
+  type: http
+  scheme: bearer
+  bearerFormat: API token
+  sources:
+  - openapi/datocms-content-management-api.yml

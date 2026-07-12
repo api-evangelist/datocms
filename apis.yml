@@ -63,6 +63,15 @@ apis:
   - url: graphql/datocms-graphql.md
     type: GraphQL
 common:
+- type: VulnerabilityDisclosure
+  url: security/datocms-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/datocms-domain-security.yml
+- type: Authentication
+  url: authentication/datocms-authentication.yml
+- name: Agent Skills
+  url: https://github.com/datocms/agent-skills
+  type: AgentSkills
 - type: LinkedIn
   url: https://www.linkedin.com/company/datocms
 - type: Website
