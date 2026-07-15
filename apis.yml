@@ -63,6 +63,8 @@ apis:
   - url: graphql/datocms-graphql.md
     type: GraphQL
 common:
+- type: AgenticAccess
+  url: agentic-access/datocms-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/datocms-vulnerability-disclosure.yml
 - type: DomainSecurity
