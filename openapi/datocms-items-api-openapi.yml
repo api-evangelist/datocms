@@ -1,0 +1,176 @@
+openapi: 3.1.0
+info:
+  title: DatoCMS Content Management Environments Items API
+  description: The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.
+  version: 3.0.0
+  contact:
+    name: DatoCMS
+    url: https://www.datocms.com/support
+servers:
+- url: https://site-api.datocms.com
+  description: DatoCMS production CMA
+security:
+- apiTokenAuth: []
+tags:
+- name: Items
+paths:
+  /items:
+    get:
+      operationId: listItems
+      summary: List items (records)
+      tags:
+      - Items
+      parameters:
+      - $ref: '#/components/parameters/PageOffset'
+      - $ref: '#/components/parameters/PageLimit'
+      - name: filter[type]
+        in: query
+        description: Item type API key or ID to filter by.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Collection of items
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ItemListResponse'
+    post:
+      operationId: createItem
+      summary: Create an item
+      tags:
+      - Items
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/ItemRequest'
+      responses:
+        '201':
+          description: Created item
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ItemResponse'
+  /items/{itemId}:
+    parameters:
+    - $ref: '#/components/parameters/ItemId'
+    get:
+      operationId: getItem
+      summary: Retrieve an item
+      tags:
+      - Items
+      responses:
+        '200':
+          description: Item
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ItemResponse'
+    put:
+      operationId: updateItem
+      summary: Update an item
+      tags:
+      - Items
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/ItemRequest'
+      responses:
+        '200':
+          description: Updated item
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ItemResponse'
+    delete:
+      operationId: deleteItem
+      summary: Delete an item
+      tags:
+      - Items
+      responses:
+        '204':
+          description: Deleted
+  /items/{itemId}/publish:
+    parameters:
+    - $ref: '#/components/parameters/ItemId'
+    put:
+      operationId: publishItem
+      summary: Publish an item
+      tags:
+      - Items
+      responses:
+        '200':
+          description: Published
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/ItemResponse'
+components:
+  schemas:
+    JsonApiResource:
+      type: object
+      required:
+      - type
+      - id
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        attributes:
+          type: object
+        relationships:
+          type: object
+        meta:
+          type: object
+    ItemListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResource'
+        meta:
+          type: object
+    ItemRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+    ItemResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+  parameters:
+    PageOffset:
+      name: page[offset]
+      in: query
+      schema:
+        type: integer
+        minimum: 0
+    PageLimit:
+      name: page[limit]
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 500
+    ItemId:
+      name: itemId
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    apiTokenAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API token
+externalDocs:
+  description: DatoCMS CMA documentation
+  url: https://www.datocms.com/docs/content-management-api

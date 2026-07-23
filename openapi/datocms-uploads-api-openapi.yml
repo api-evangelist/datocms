@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: DatoCMS Content Management Environments Uploads API
+  description: The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.
+  version: 3.0.0
+  contact:
+    name: DatoCMS
+    url: https://www.datocms.com/support
+servers:
+- url: https://site-api.datocms.com
+  description: DatoCMS production CMA
+security:
+- apiTokenAuth: []
+tags:
+- name: Uploads
+paths:
+  /uploads:
+    get:
+      operationId: listUploads
+      summary: List uploads
+      tags:
+      - Uploads
+      responses:
+        '200':
+          description: Collection of uploads
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/UploadListResponse'
+    post:
+      operationId: createUpload
+      summary: Create an upload
+      tags:
+      - Uploads
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/UploadRequest'
+      responses:
+        '201':
+          description: Created upload
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/UploadResponse'
+components:
+  schemas:
+    UploadRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+    JsonApiResource:
+      type: object
+      required:
+      - type
+      - id
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        attributes:
+          type: object
+        relationships:
+          type: object
+        meta:
+          type: object
+    UploadListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResource'
+    UploadResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+  securitySchemes:
+    apiTokenAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API token
+externalDocs:
+  description: DatoCMS CMA documentation
+  url: https://www.datocms.com/docs/content-management-api

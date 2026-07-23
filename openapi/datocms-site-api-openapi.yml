@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: DatoCMS Content Management Environments Site API
+  description: The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.
+  version: 3.0.0
+  contact:
+    name: DatoCMS
+    url: https://www.datocms.com/support
+servers:
+- url: https://site-api.datocms.com
+  description: DatoCMS production CMA
+security:
+- apiTokenAuth: []
+tags:
+- name: Site
+paths:
+  /site:
+    get:
+      operationId: getSite
+      summary: Retrieve site details
+      tags:
+      - Site
+      responses:
+        '200':
+          description: Site
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/SiteResponse'
+components:
+  schemas:
+    JsonApiResource:
+      type: object
+      required:
+      - type
+      - id
+      properties:
+        type:
+          type: string
+        id:
+          type: string
+        attributes:
+          type: object
+        relationships:
+          type: object
+        meta:
+          type: object
+    SiteResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+  securitySchemes:
+    apiTokenAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API token
+externalDocs:
+  description: DatoCMS CMA documentation
+  url: https://www.datocms.com/docs/content-management-api
