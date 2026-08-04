@@ -1,0 +1,111 @@
+{
+  "info": {
+    "_postman_id": "353ae650-12b9-4a39-8437-353a1fb829c0",
+    "name": "DatoCMS Content Management Environments API",
+    "description": "The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.\n\nContact Support:\n Name: DatoCMS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:29:16.000Z",
+    "updatedAt": "2026-07-28T01:29:16.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-353ae650-12b9-4a39-8437-353a1fb829c0"
+  },
+  "item": [
+    {
+      "name": "environments",
+      "item": [
+        {
+          "name": "List environments",
+          "id": "98abaf96-02af-4dd3-bf78-38d2d8f75adf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/environments",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "environments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "20b0bc06-c7b7-42ff-9624-a2ef480420a1",
+              "name": "Collection of environments",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/environments",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "environments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": [\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    },\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T01:29:16.000Z",
+              "updatedAt": "2026-07-28T01:29:16.000Z",
+              "uid": "35240-20b0bc06-c7b7-42ff-9624-a2ef480420a1"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:16.000Z",
+          "updatedAt": "2026-07-28T01:29:16.000Z",
+          "uid": "35240-98abaf96-02af-4dd3-bf78-38d2d8f75adf"
+        }
+      ],
+      "id": "29e39544-b587-4109-936b-0e9b9c3ab0f5",
+      "createdAt": "2026-07-28T01:29:16.000Z",
+      "updatedAt": "2026-07-28T01:29:16.000Z",
+      "uid": "35240-29e39544-b587-4109-936b-0e9b9c3ab0f5"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://site-api.datocms.com"
+    }
+  ]
+}

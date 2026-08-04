@@ -1,0 +1,211 @@
+{
+  "info": {
+    "_postman_id": "5cf25c62-2bca-4b71-a9f4-bfd66818a997",
+    "name": "DatoCMS Content Management Environments Webhooks API",
+    "description": "The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.\n\nContact Support:\n Name: DatoCMS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:29:34.000Z",
+    "updatedAt": "2026-07-28T01:29:34.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-5cf25c62-2bca-4b71-a9f4-bfd66818a997"
+  },
+  "item": [
+    {
+      "name": "webhooks",
+      "item": [
+        {
+          "name": "List webhooks",
+          "id": "7d4ecacf-db60-40f4-aff6-d1f3007acaef",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/webhooks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "webhooks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ae3599f5-c073-4bae-8795-a1c5dbac5ab4",
+              "name": "Collection of webhooks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": [\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    },\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T01:29:34.000Z",
+              "updatedAt": "2026-07-28T01:29:34.000Z",
+              "uid": "35240-ae3599f5-c073-4bae-8795-a1c5dbac5ab4"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:34.000Z",
+          "updatedAt": "2026-07-28T01:29:34.000Z",
+          "uid": "35240-7d4ecacf-db60-40f4-aff6-d1f3007acaef"
+        },
+        {
+          "name": "Create a webhook",
+          "id": "13ce7dad-1545-4a6a-98d9-a19678cf283e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/webhooks",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "webhooks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "d6d1d0c4-eeba-463b-b3ac-551291d04aea",
+              "name": "Created webhook",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/webhooks",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "webhooks"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+              "createdAt": "2026-07-28T01:29:34.000Z",
+              "updatedAt": "2026-07-28T01:29:34.000Z",
+              "uid": "35240-d6d1d0c4-eeba-463b-b3ac-551291d04aea"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:34.000Z",
+          "updatedAt": "2026-07-28T01:29:34.000Z",
+          "uid": "35240-13ce7dad-1545-4a6a-98d9-a19678cf283e"
+        }
+      ],
+      "id": "8db8349e-3092-4b33-91e5-8c5e7e2619c8",
+      "createdAt": "2026-07-28T01:29:34.000Z",
+      "updatedAt": "2026-07-28T01:29:34.000Z",
+      "uid": "35240-8db8349e-3092-4b33-91e5-8c5e7e2619c8"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://site-api.datocms.com"
+    }
+  ]
+}

@@ -1,0 +1,623 @@
+{
+  "info": {
+    "_postman_id": "0152cc29-6784-4e69-bdc2-9d37516abb57",
+    "name": "DatoCMS Content Management Environments Items API",
+    "description": "The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.\n\nContact Support:\n Name: DatoCMS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:29:19.000Z",
+    "updatedAt": "2026-07-28T01:29:19.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0152cc29-6784-4e69-bdc2-9d37516abb57"
+  },
+  "item": [
+    {
+      "name": "items",
+      "item": [
+        {
+          "name": "{itemId}",
+          "item": [
+            {
+              "name": "publish",
+              "item": [
+                {
+                  "name": "Publish an item",
+                  "id": "b6593272-159c-4373-b1c7-fd4c1d1082c9",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/vnd.api+json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/items/:itemId/publish",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "items",
+                        ":itemId",
+                        "publish"
+                      ],
+                      "variable": [
+                        {
+                          "id": "2e84013c-9258-4471-b645-79165e9c098b",
+                          "key": "itemId",
+                          "value": "<string>",
+                          "description": "(Required) "
+                        }
+                      ]
+                    }
+                  },
+                  "response": [
+                    {
+                      "id": "29ae2f22-7d3b-48bc-ae23-9666a0e713a1",
+                      "name": "Published",
+                      "originalRequest": {
+                        "method": "PUT",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/vnd.api+json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: bearer",
+                            "key": "Authorization",
+                            "value": "Bearer <token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/items/:itemId/publish",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "items",
+                            ":itemId",
+                            "publish"
+                          ],
+                          "variable": [
+                            {
+                              "key": "itemId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/vnd.api+json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                      "createdAt": "2026-07-28T01:29:19.000Z",
+                      "updatedAt": "2026-07-28T01:29:19.000Z",
+                      "uid": "35240-29ae2f22-7d3b-48bc-ae23-9666a0e713a1"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:29:19.000Z",
+                  "updatedAt": "2026-07-28T01:29:19.000Z",
+                  "uid": "35240-b6593272-159c-4373-b1c7-fd4c1d1082c9"
+                }
+              ],
+              "id": "5648933a-f7ac-49fb-9e80-7feb0d1497d8",
+              "createdAt": "2026-07-28T01:29:19.000Z",
+              "updatedAt": "2026-07-28T01:29:19.000Z",
+              "uid": "35240-5648933a-f7ac-49fb-9e80-7feb0d1497d8"
+            },
+            {
+              "name": "Retrieve an item",
+              "id": "52840d28-220e-4dbb-9df2-c71a94172b3e",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/items/:itemId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ":itemId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "ec746b34-59ca-423e-af41-0a77ad0380d3",
+                      "key": "itemId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "40f17d52-c955-491e-b52d-071508ac1957",
+                  "name": "Item",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/vnd.api+json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/items/:itemId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "items",
+                        ":itemId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "itemId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/vnd.api+json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                  "createdAt": "2026-07-28T01:29:19.000Z",
+                  "updatedAt": "2026-07-28T01:29:19.000Z",
+                  "uid": "35240-40f17d52-c955-491e-b52d-071508ac1957"
+                }
+              ],
+              "createdAt": "2026-07-28T01:29:19.000Z",
+              "updatedAt": "2026-07-28T01:29:19.000Z",
+              "uid": "35240-52840d28-220e-4dbb-9df2-c71a94172b3e"
+            },
+            {
+              "name": "Update an item",
+              "id": "cc729cc6-3de6-4809-a46a-59ba58b7a813",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items/:itemId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ":itemId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "45d8ee73-d8ec-4108-baf4-c7d530dcb602",
+                      "key": "itemId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "65f6334b-7082-48e3-ae29-c80bdf2e5f7b",
+                  "name": "Updated item",
+                  "originalRequest": {
+                    "method": "PUT",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "value": "application/vnd.api+json"
+                      },
+                      {
+                        "key": "Accept",
+                        "value": "application/vnd.api+json"
+                      },
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                      "options": {
+                        "raw": {
+                          "headerFamily": "json",
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{baseUrl}}/items/:itemId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "items",
+                        ":itemId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "itemId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "application/vnd.api+json"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                  "createdAt": "2026-07-28T01:29:19.000Z",
+                  "updatedAt": "2026-07-28T01:29:19.000Z",
+                  "uid": "35240-65f6334b-7082-48e3-ae29-c80bdf2e5f7b"
+                }
+              ],
+              "createdAt": "2026-07-28T01:29:19.000Z",
+              "updatedAt": "2026-07-28T01:29:19.000Z",
+              "uid": "35240-cc729cc6-3de6-4809-a46a-59ba58b7a813"
+            },
+            {
+              "name": "Delete an item",
+              "id": "7472b359-41ab-456e-9511-d9f6a7b26e2d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{baseUrl}}/items/:itemId",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items",
+                    ":itemId"
+                  ],
+                  "variable": [
+                    {
+                      "id": "37887ea7-9cc9-46f8-8d9f-4eae3bf56a06",
+                      "key": "itemId",
+                      "value": "<string>",
+                      "description": "(Required) "
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "id": "ccee442f-e9fb-43e0-9f2d-a80e5e883a38",
+                  "name": "Deleted",
+                  "originalRequest": {
+                    "method": "DELETE",
+                    "header": [
+                      {
+                        "description": "Added as a part of security scheme: bearer",
+                        "key": "Authorization",
+                        "value": "Bearer <token>"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/items/:itemId",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "items",
+                        ":itemId"
+                      ],
+                      "variable": [
+                        {
+                          "key": "itemId"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "No Content",
+                  "code": 204,
+                  "_postman_previewlanguage": "text",
+                  "header": [],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": null,
+                  "createdAt": "2026-07-28T01:29:19.000Z",
+                  "updatedAt": "2026-07-28T01:29:19.000Z",
+                  "uid": "35240-ccee442f-e9fb-43e0-9f2d-a80e5e883a38"
+                }
+              ],
+              "createdAt": "2026-07-28T01:29:19.000Z",
+              "updatedAt": "2026-07-28T01:29:19.000Z",
+              "uid": "35240-7472b359-41ab-456e-9511-d9f6a7b26e2d"
+            }
+          ],
+          "id": "cb62e470-2520-4bfb-8d03-2892d3629030",
+          "createdAt": "2026-07-28T01:29:19.000Z",
+          "updatedAt": "2026-07-28T01:29:19.000Z",
+          "uid": "35240-cb62e470-2520-4bfb-8d03-2892d3629030"
+        },
+        {
+          "name": "List items (records)",
+          "id": "76e3fb27-9e44-4717-a431-5b8818da8c3f",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/items?page[offset]=<integer>&page[limit]=<integer>&filter[type]=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items"
+              ],
+              "query": [
+                {
+                  "key": "page[offset]",
+                  "value": "<integer>"
+                },
+                {
+                  "key": "page[limit]",
+                  "value": "<integer>"
+                },
+                {
+                  "description": "Item type API key or ID to filter by.",
+                  "key": "filter[type]",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "e91011da-2fd6-4332-a0f2-4c85fd146329",
+              "name": "Collection of items",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/items?page[offset]=<integer>&page[limit]=<integer>&filter[type]=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items"
+                  ],
+                  "query": [
+                    {
+                      "key": "page[offset]",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "page[limit]",
+                      "value": "<integer>"
+                    },
+                    {
+                      "description": "Item type API key or ID to filter by.",
+                      "key": "filter[type]",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": [\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    },\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    }\n  ],\n  \"meta\": {}\n}",
+              "createdAt": "2026-07-28T01:29:19.000Z",
+              "updatedAt": "2026-07-28T01:29:19.000Z",
+              "uid": "35240-e91011da-2fd6-4332-a0f2-4c85fd146329"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:19.000Z",
+          "updatedAt": "2026-07-28T01:29:19.000Z",
+          "uid": "35240-76e3fb27-9e44-4717-a431-5b8818da8c3f"
+        },
+        {
+          "name": "Create an item",
+          "id": "342f395c-dd80-42c8-be23-d35e6165f716",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/items",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "items"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "10f7ebda-1a70-4118-a5af-e62df9f5592d",
+              "name": "Created item",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/items",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "items"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+              "createdAt": "2026-07-28T01:29:19.000Z",
+              "updatedAt": "2026-07-28T01:29:19.000Z",
+              "uid": "35240-10f7ebda-1a70-4118-a5af-e62df9f5592d"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:19.000Z",
+          "updatedAt": "2026-07-28T01:29:19.000Z",
+          "uid": "35240-342f395c-dd80-42c8-be23-d35e6165f716"
+        }
+      ],
+      "id": "9e01e620-58e1-4fd2-915c-d29c88e27eed",
+      "createdAt": "2026-07-28T01:29:19.000Z",
+      "updatedAt": "2026-07-28T01:29:19.000Z",
+      "uid": "35240-9e01e620-58e1-4fd2-915c-d29c88e27eed"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://site-api.datocms.com"
+    }
+  ]
+}

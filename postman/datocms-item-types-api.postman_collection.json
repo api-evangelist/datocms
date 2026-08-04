@@ -1,0 +1,211 @@
+{
+  "info": {
+    "_postman_id": "7c0870e9-56cb-468a-a6aa-b3338e5fa74e",
+    "name": "DatoCMS Content Management Environments Item Types API",
+    "description": "The DatoCMS Content Management API (CMA) is a JSON:API-based REST API for managing content, schema, uploads, environments, and configuration on a DatoCMS project. It exposes 150+ endpoints across 40+ resources for items, item types, fields, uploads, sites, environments, webhooks, plugins, workflows, and roles. For public content delivery, DatoCMS recommends the Content Delivery API GraphQL endpoint instead.\n\nContact Support:\n Name: DatoCMS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:29:18.000Z",
+    "updatedAt": "2026-07-28T01:29:18.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-7c0870e9-56cb-468a-a6aa-b3338e5fa74e"
+  },
+  "item": [
+    {
+      "name": "item-types",
+      "item": [
+        {
+          "name": "List item types (models)",
+          "id": "5a787bd2-0354-4e57-adcb-df223cf40818",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/item-types",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "item-types"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "0838f86c-f5f5-4c17-8aca-d771069af5b1",
+              "name": "Collection of item types",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/item-types",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "item-types"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": [\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    },\n    {\n      \"type\": \"<string>\",\n      \"id\": \"<string>\",\n      \"attributes\": {},\n      \"relationships\": {},\n      \"meta\": {}\n    }\n  ]\n}",
+              "createdAt": "2026-07-28T01:29:18.000Z",
+              "updatedAt": "2026-07-28T01:29:18.000Z",
+              "uid": "35240-0838f86c-f5f5-4c17-8aca-d771069af5b1"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:18.000Z",
+          "updatedAt": "2026-07-28T01:29:18.000Z",
+          "uid": "35240-5a787bd2-0354-4e57-adcb-df223cf40818"
+        },
+        {
+          "name": "Create an item type",
+          "id": "5ef98783-4a4b-482e-9501-ad0b7990e702",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/item-types",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "item-types"
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "dfa54055-ba88-401b-88de-453351b28130",
+              "name": "Created item type",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: bearer",
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/item-types",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "item-types"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"data\": {\n    \"type\": \"<string>\",\n    \"id\": \"<string>\",\n    \"attributes\": {},\n    \"relationships\": {},\n    \"meta\": {}\n  }\n}",
+              "createdAt": "2026-07-28T01:29:18.000Z",
+              "updatedAt": "2026-07-28T01:29:18.000Z",
+              "uid": "35240-dfa54055-ba88-401b-88de-453351b28130"
+            }
+          ],
+          "createdAt": "2026-07-28T01:29:18.000Z",
+          "updatedAt": "2026-07-28T01:29:18.000Z",
+          "uid": "35240-5ef98783-4a4b-482e-9501-ad0b7990e702"
+        }
+      ],
+      "id": "e05289a8-8242-4c0a-af9e-c307b1a81849",
+      "createdAt": "2026-07-28T01:29:18.000Z",
+      "updatedAt": "2026-07-28T01:29:18.000Z",
+      "uid": "35240-e05289a8-8242-4c0a-af9e-c307b1a81849"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://site-api.datocms.com"
+    }
+  ]
+}

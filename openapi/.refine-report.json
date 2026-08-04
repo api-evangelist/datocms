@@ -1,0 +1,26 @@
+{
+  "provider": "datocms",
+  "sources": [
+    "datocms-environments-api-openapi.yml",
+    "datocms-fields-api-openapi.yml",
+    "datocms-item-types-api-openapi.yml",
+    "datocms-items-api-openapi.yml",
+    "datocms-site-api-openapi.yml",
+    "datocms-uploads-api-openapi.yml",
+    "datocms-webhooks-api-openapi.yml"
+  ],
+  "outputs": [
+    "datocms-environments-api-openapi.yml",
+    "datocms-fields-api-openapi.yml",
+    "datocms-item-types-api-openapi.yml",
+    "datocms-items-api-openapi.yml",
+    "datocms-site-api-openapi.yml",
+    "datocms-uploads-api-openapi.yml",
+    "datocms-webhooks-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
