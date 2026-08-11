@@ -214,8 +214,6 @@ common:
   url: json-ld/datocms-context.jsonld
 - type: Vocabulary
   url: vocabulary/datocms-vocabulary.yml
-- type: Capabilities
-  url: capabilities/datocms-capabilities.yml
 - type: Rules
   url: rules/datocms-rules.yml
 - type: Integrations
