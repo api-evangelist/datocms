@@ -1,0 +1,144 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DatoCMS Content Management Environments Items API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List items (records)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/items",
+            "params": [
+              {
+                "name": "page[offset]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "page[limit]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[type]",
+                "value": "",
+                "type": "query",
+                "description": "Item type API key or ID to filter by."
+              }
+            ]
+          },
+          "docs": "List items (records)"
+        },
+        {
+          "info": {
+            "name": "Create an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/items",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an item"
+        },
+        {
+          "info": {
+            "name": "Retrieve an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve an item"
+        },
+        {
+          "info": {
+            "name": "Update an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://site-api.datocms.com/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an item"
+        },
+        {
+          "info": {
+            "name": "Delete an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://site-api.datocms.com/items/:itemId",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an item"
+        },
+        {
+          "info": {
+            "name": "Publish an item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://site-api.datocms.com/items/:itemId/publish",
+            "params": [
+              {
+                "name": "itemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Publish an item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

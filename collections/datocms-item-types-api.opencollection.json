@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DatoCMS Content Management Environments Item Types API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Item Types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List item types (models)",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/item-types"
+          },
+          "docs": "List item types (models)"
+        },
+        {
+          "info": {
+            "name": "Create an item type",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/item-types",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an item type"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

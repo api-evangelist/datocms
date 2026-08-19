@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "DatoCMS Content Management Environments Uploads API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Uploads",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List uploads",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://site-api.datocms.com/uploads"
+          },
+          "docs": "List uploads"
+        },
+        {
+          "info": {
+            "name": "Create an upload",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://site-api.datocms.com/uploads",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an upload"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
