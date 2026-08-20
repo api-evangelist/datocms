@@ -110,6 +110,8 @@ apis:
   humanURL: https://www.datocms.com/docs/content-management-api
   baseURL: https://site-api.datocms.com
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -164,6 +166,8 @@ apis:
   humanURL: https://www.datocms.com/docs/content-management-api
   baseURL: https://site-api.datocms.com
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI
