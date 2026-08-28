@@ -5,6 +5,18 @@ description: >-
   across websites, mobile apps, and other digital experiences. The platform exposes a JSON:API-based Content Management
   API for content and schema, and a CDN-fronted GraphQL Content Delivery API for read-heavy client applications.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
