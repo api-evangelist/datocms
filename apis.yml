@@ -69,6 +69,8 @@ apis:
   humanURL: https://www.datocms.com/docs/content-management-api
   baseURL: https://site-api.datocms.com
   tags:
+  - Environment
+  tags_raw:
   - Environments
   properties:
   - type: OpenAPI
