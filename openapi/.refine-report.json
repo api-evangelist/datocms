@@ -1,13 +1,7 @@
 {
   "provider": "datocms",
   "sources": [
-    "datocms-environments-api-openapi.yml",
-    "datocms-fields-api-openapi.yml",
-    "datocms-item-types-api-openapi.yml",
-    "datocms-items-api-openapi.yml",
-    "datocms-site-api-openapi.yml",
-    "datocms-uploads-api-openapi.yml",
-    "datocms-webhooks-api-openapi.yml"
+    "_original/datocms-content-management-api.yml"
   ],
   "outputs": [
     "datocms-environments-api-openapi.yml",
@@ -21,6 +15,18 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "datocms-content-management-api.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "datocms-environments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datocms-fields-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datocms-item-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datocms-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datocms-site-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datocms-uploads-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "datocms-webhooks-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
