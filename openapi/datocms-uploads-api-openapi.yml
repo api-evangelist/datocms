@@ -47,11 +47,6 @@ paths:
                 $ref: '#/components/schemas/UploadResponse'
 components:
   schemas:
-    UploadResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
     UploadListResponse:
       type: object
       properties:
@@ -59,6 +54,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/JsonApiResource'
+    UploadResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
     UploadRequest:
       type: object
       properties:
