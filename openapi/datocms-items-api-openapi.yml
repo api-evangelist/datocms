@@ -110,7 +110,46 @@ paths:
               schema:
                 $ref: '#/components/schemas/ItemResponse'
 components:
+  parameters:
+    ItemId:
+      name: itemId
+      in: path
+      required: true
+      schema:
+        type: string
+    PageLimit:
+      name: page[limit]
+      in: query
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 500
+    PageOffset:
+      name: page[offset]
+      in: query
+      schema:
+        type: integer
+        minimum: 0
   schemas:
+    ItemListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResource'
+        meta:
+          type: object
+    ItemResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+    ItemRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
     JsonApiResource:
       type: object
       required:
@@ -127,45 +166,6 @@ components:
           type: object
         meta:
           type: object
-    ItemRequest:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
-    ItemResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
-    ItemListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/JsonApiResource'
-        meta:
-          type: object
-  parameters:
-    ItemId:
-      name: itemId
-      in: path
-      required: true
-      schema:
-        type: string
-    PageOffset:
-      name: page[offset]
-      in: query
-      schema:
-        type: integer
-        minimum: 0
-    PageLimit:
-      name: page[limit]
-      in: query
-      schema:
-        type: integer
-        minimum: 1
-        maximum: 500
   securitySchemes:
     apiTokenAuth:
       type: http

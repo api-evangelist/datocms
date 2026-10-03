@@ -47,18 +47,6 @@ paths:
                 $ref: '#/components/schemas/UploadResponse'
 components:
   schemas:
-    UploadListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/JsonApiResource'
-    UploadResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
     UploadRequest:
       type: object
       properties:
@@ -80,6 +68,18 @@ components:
           type: object
         meta:
           type: object
+    UploadResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+    UploadListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResource'
   securitySchemes:
     apiTokenAuth:
       type: http
