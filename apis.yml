@@ -196,6 +196,9 @@ apis:
   - type: JSONSchema
     url: json-schema/item.json
 common:
+- type: CapabilityMap
+  url: capabilities/datocms-capability-edges.yml
+  name: DatoCMS Business Capability Map
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/datocms/overview
 - type: AgenticAccess
