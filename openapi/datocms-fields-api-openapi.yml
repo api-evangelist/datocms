@@ -29,6 +29,13 @@ paths:
                 $ref: '#/components/schemas/FieldListResponse'
 components:
   schemas:
+    FieldListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResource'
     JsonApiResource:
       type: object
       required:
@@ -45,13 +52,6 @@ components:
           type: object
         meta:
           type: object
-    FieldListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/JsonApiResource'
   securitySchemes:
     apiTokenAuth:
       type: http

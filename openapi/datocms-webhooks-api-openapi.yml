@@ -57,6 +57,13 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/JsonApiResource'
+    WebhookListResponse:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResource'
     JsonApiResource:
       type: object
       required:
@@ -73,13 +80,6 @@ components:
           type: object
         meta:
           type: object
-    WebhookListResponse:
-      type: object
-      properties:
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/JsonApiResource'
   securitySchemes:
     apiTokenAuth:
       type: http

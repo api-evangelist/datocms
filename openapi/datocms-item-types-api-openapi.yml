@@ -47,6 +47,16 @@ paths:
                 $ref: '#/components/schemas/ItemTypeResponse'
 components:
   schemas:
+    ItemTypeResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
+    ItemTypeRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
     ItemTypeListResponse:
       type: object
       properties:
@@ -54,11 +64,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/JsonApiResource'
-    ItemTypeRequest:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
     JsonApiResource:
       type: object
       required:
@@ -75,11 +80,6 @@ components:
           type: object
         meta:
           type: object
-    ItemTypeResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
   securitySchemes:
     apiTokenAuth:
       type: http
