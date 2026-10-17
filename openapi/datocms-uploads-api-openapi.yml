@@ -52,6 +52,11 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/JsonApiResource'
+    UploadRequest:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
     UploadListResponse:
       type: object
       properties:
@@ -75,11 +80,6 @@ components:
           type: object
         meta:
           type: object
-    UploadRequest:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
   securitySchemes:
     apiTokenAuth:
       type: http

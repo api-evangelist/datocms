@@ -29,6 +29,11 @@ paths:
                 $ref: '#/components/schemas/SiteResponse'
 components:
   schemas:
+    SiteResponse:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/JsonApiResource'
     JsonApiResource:
       type: object
       required:
@@ -45,11 +50,6 @@ components:
           type: object
         meta:
           type: object
-    SiteResponse:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/JsonApiResource'
   securitySchemes:
     apiTokenAuth:
       type: http
