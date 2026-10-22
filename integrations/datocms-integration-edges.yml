@@ -2,6 +2,8 @@ generated: '2026-10-14'
 method: searched
 checked:
 - okta/integrations/okta-integration-edges.yml
+- netlify/integrations/netlify-integration-edges.yml
+- vercel/integrations/vercel-integration-edges.yml
 source:
 - okta/integrations/okta-integration-edges.yml
 edges:
@@ -32,3 +34,44 @@ edges:
   - IDENTITY_SECURITY_POSTURE_MANAGEMENT
   - SAML
   - UPDATE
+- partner_name: Netlify (own)
+  partner: netlify
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.netlify.com/integrations/datocms/
+  mirror_of: netlify/integrations/netlify-integration-edges.yml
+  apps:
+  - DatoCMS
+  - Automatic environment backups plugin for DatoCMS Netlify API
+  - Netlify Forms Plugin for DatoCMS Netlify API
+  - Netlify Identity Plugin for DatoCMS Netlify API
+  - Netlify App for DatoCMS
+  - DatoCMS Setup Guide for Netlify Create
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: CMS
+  partner_tier: listing
+- partner_name: Vercel (own)
+  partner: vercel
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://vercel.com/marketplace/datocms
+  mirror_of: vercel/integrations/vercel-integration-edges.yml
+  apps:
+  - DatoCMS
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: CMS
+  partner_tier: third-party
