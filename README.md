@@ -1,4 +1,4 @@
-# DatoCMS (datocms)
+# DatoCMS
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,93 +66,189 @@
 
 DatoCMS is a headless content management system that enables users to create, manage, and deliver digital content across websites, mobile apps, and other digital experiences. The platform exposes a JSON:API-based Content Management API for content and schema, and a CDN-fronted GraphQL Content Delivery API for read-heavy client applications.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/datocms/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/datocms/refs/heads/main/apis.yml)
+**Areas:** CMS · Content Delivery · Content Management · GraphQL · Headless CMS
 
-## Scope
+## DatoCMS on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for DatoCMS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/datocms/](https://apis.io/providers/datocms/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (8)
 
-- CMS
-- Content Delivery
-- Content Management
-- GraphQL
-- Headless CMS
+- [DatoCMS Content Delivery API](https://apis.io/apis/datocms/datocms-content-delivery-api/) — The DatoCMS Content Delivery API is a CDN-fronted GraphQL endpoint optimized for low-latency reads of published content from client applications such as…
+- [DatoCMS Environments API](https://apis.io/apis/datocms/datocms-environments-api/) — The Environments API from DatoCMS — 1 operation(s) for environments.
+- [DatoCMS Fields API](https://apis.io/apis/datocms/datocms-fields-api/) — The Fields API from DatoCMS — 1 operation(s) for fields.
+- [DatoCMS Item Types API](https://apis.io/apis/datocms/datocms-item-types-api/) — The Item Types API from DatoCMS — 1 operation(s) for item types.
+- [DatoCMS Items API](https://apis.io/apis/datocms/datocms-items-api/) — The Items API from DatoCMS — 3 operation(s) for items.
+- [DatoCMS Site API](https://apis.io/apis/datocms/datocms-site-api/) — The Site API from DatoCMS — 1 operation(s) for site.
+- [DatoCMS Uploads API](https://apis.io/apis/datocms/datocms-uploads-api/) — The Uploads API from DatoCMS — 1 operation(s) for uploads.
+- [DatoCMS Webhooks API](https://apis.io/apis/datocms/datocms-webhooks-api/) — The Webhooks API from DatoCMS — 1 operation(s) for webhooks.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-01-08
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### DatoCMS Content Management API
+GraphQL schemas.
 
-The DatoCMS Content Management API (CMA) is a JSON:API REST API for managing items, item types, fields, uploads, environments, webhooks, plugins, workflows, and roles on a DatoCMS site. It exposes 150+ endpoints across 40+ resources, authenticated with API tokens.
+- [DatoCMS GraphQL API](https://apis.io/graphqls/datocms/datocms-graphql/)
 
-- **Human URL:** [https://www.datocms.com/docs/content-management-api](https://www.datocms.com/docs/content-management-api)
-- **Base URL:** `https://site-api.datocms.com`
+#### Agent skills (12)
 
-#### Tags
+Agent skills built on the API.
 
-- CMA
-- CMS
-- Content Management
-- Headless CMS
-- JSON:API
+- [datocms-cda](https://apis.io/agent-skills/datocms/datocms-cda/)
+- [datocms-cli](https://apis.io/agent-skills/datocms/datocms-cli/)
+- [datocms-cma](https://apis.io/agent-skills/datocms/datocms-cma/)
+- [datocms-content-modeling](https://apis.io/agent-skills/datocms/datocms-content-modeling/)
+- [datocms-feedback](https://apis.io/agent-skills/datocms/datocms-feedback/)
+- [datocms-frontend-integrations](https://apis.io/agent-skills/datocms/datocms-frontend-integrations/)
+- [datocms-plugin](https://apis.io/agent-skills/datocms/datocms-plugin/)
+- [datocms-setup](https://apis.io/agent-skills/datocms/datocms-setup/)
+- [eval-triggers](https://apis.io/agent-skills/datocms/eval-triggers/)
+- [eval-triggers](https://apis.io/agent-skills/datocms/eval-triggers-2/)
+- [validate](https://apis.io/agent-skills/datocms/validate/)
+- [validate](https://apis.io/agent-skills/datocms/validate-2/)
 
-#### Properties
+#### Agentic access (1)
 
-- [Documentation](https://www.datocms.com/docs/content-management-api)
-- [Authentication](https://www.datocms.com/docs/content-management-api/authentication)
-- [Hyperschema](https://site-api.datocms.com/docs/site-api-hyperschema.json)
-- [OpenAPI](openapi/datocms-content-management-api.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/datocms-content-management-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/datocms-content-management-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [JSON Schema](json-schema/item.json) — [JSON Schema](https://json-schema.org/specification)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-### DatoCMS Content Delivery API
+- [Datocms Agentic Access](https://apis.io/agentic-access/datocms/datocms-agentic-access/)
 
-The DatoCMS Content Delivery API is a CDN-fronted GraphQL endpoint optimized for low-latency reads of published content from client applications such as Jamstack and SSR sites.
+#### JSON Schema (1)
 
-- **Human URL:** [https://www.datocms.com/docs/content-delivery-api](https://www.datocms.com/docs/content-delivery-api)
-- **Base URL:** `https://graphql.datocms.com`
+The data models the API reads and writes.
 
-#### Tags
+- [DatoCMS Item](https://apis.io/schemas/datocms/item/)
 
-- CDN
-- Content Delivery
-- GraphQL
-- Read API
+#### JSON-LD (1)
 
-#### Properties
+Linked-data contexts for the provider's vocabulary.
 
-- [Documentation](https://www.datocms.com/docs/content-delivery-api)
-- [Postman Collection](collections/datocms-content-management-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/datocms-content-management-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Datocms Context](https://apis.io/jsonld/datocms/datocms-context/)
 
-## Common Properties
+#### Vocabulary (1)
 
-- [LinkedIn](https://www.linkedin.com/company/datocms)
+The provider's domain terms, defined.
+
+- [DatoCMS Vocabulary](https://apis.io/vocabularies/datocms/datocms-vocabulary/)
+
+#### Collections (15)
+
+Postman and Open Collection request collections.
+
+- [DatoCMS Content Management API](https://apis.io/collections/datocms/open-datocms-content-management-api/)
+- [DatoCMS Content Management Environments API](https://apis.io/collections/datocms/open-datocms-environments-api/)
+- [DatoCMS Content Management Environments Fields API](https://apis.io/collections/datocms/open-datocms-fields-api/)
+- [DatoCMS Content Management Environments Item Types API](https://apis.io/collections/datocms/open-datocms-item-types-api/)
+- [DatoCMS Content Management Environments Items API](https://apis.io/collections/datocms/open-datocms-items-api/)
+- [DatoCMS Content Management Environments Site API](https://apis.io/collections/datocms/open-datocms-site-api/)
+- [DatoCMS Content Management Environments Uploads API](https://apis.io/collections/datocms/open-datocms-uploads-api/)
+- [DatoCMS Content Management Environments Webhooks API](https://apis.io/collections/datocms/open-datocms-webhooks-api/)
+- [DatoCMS Content Management Environments API](https://apis.io/collections/datocms/postman-datocms-environments-api/)
+- [DatoCMS Content Management Environments Fields API](https://apis.io/collections/datocms/postman-datocms-fields-api/)
+- [DatoCMS Content Management Environments Item Types API](https://apis.io/collections/datocms/postman-datocms-item-types-api/)
+- [DatoCMS Content Management Environments Items API](https://apis.io/collections/datocms/postman-datocms-items-api/)
+- [DatoCMS Content Management Environments Site API](https://apis.io/collections/datocms/postman-datocms-site-api/)
+- [DatoCMS Content Management Environments Uploads API](https://apis.io/collections/datocms/postman-datocms-uploads-api/)
+- [DatoCMS Content Management Environments Webhooks API](https://apis.io/collections/datocms/postman-datocms-webhooks-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [DatoCMS — jsonschema rules](https://apis.io/rules/datocms/datocms-jsonschema-spectral-rules/)
+- [DatoCMS API Rules](https://apis.io/rules/datocms/datocms-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Datocms Authentication](https://apis.io/security/datocms/datocms-authentication/)
+- [Datocms Domain Security](https://apis.io/security/datocms/datocms-domain-security/)
+- [Datocms Vulnerability Disclosure](https://apis.io/security/datocms/datocms-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Datocms Plans Pricing](https://apis.io/plans/datocms/datocms-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Datocms Rate Limits](https://apis.io/rate-limits/datocms/datocms-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Datocms Finops](https://apis.io/finops/datocms/datocms-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.datocms.com)
 - [Documentation](https://www.datocms.com/docs)
 - [Pricing](https://www.datocms.com/pricing)
-- [Sign Up](https://dashboard.datocms.com/signup)
-- [Login](https://dashboard.datocms.com/login)
-- [Blog](https://www.datocms.com/blog)
-- [Git Hub](https://github.com/datocms)
-- [Status Page](https://status.datocms.com)
 - [Support](https://www.datocms.com/support)
-- [JSON-LD](json-ld/datocms-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Vocabulary](vocabulary/datocms-vocabulary.yml)
-- [Capabilities](capabilities/datocms-capabilities.yml)
-- [Rules](rules/datocms-rules.yml)
-- [Integrations](https://www.datocms.com/marketplace)
+- [Blog](https://www.datocms.com/blog)
+- [Status](https://status.datocms.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 41.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 55.0 |
+| Contract governance | 27.3 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 36.2 |
+| Access clarity | 25.0 |
+
+**Agent readiness 22.0** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | unknown |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 22.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/datocms/](https://apis.io/providers/datocms/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for DatoCMS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/datocms/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
